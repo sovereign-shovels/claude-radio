@@ -1,8 +1,8 @@
 # claude-radio
 
-> Push-to-talk voice loop with any LLM. Ambient mode for dictation; not trying to be a Siri replacement.
+> Push-to-talk voice loop with any LLM. Ambient mode for dictation.
 
-**Status:** v0.1 — planning. Not yet released.
+**Status:** v0.1 — in development.
 
 **Sovereignty:** sovereign-by-construction. BYO endpoint, BYO key, BYO model.
 A local-only configuration is documented and tested.
@@ -14,22 +14,42 @@ Best-effort community shovel — no SLA, no roadmap commitments.
 
 ## What this is
 
-Push-to-talk voice loop with any LLM. Ambient mode for dictation; not trying to be a Siri replacement.
+Push-to-talk voice loop with any LLM. Ambient mode for dictation.
 
 ## What this isn't
 
-Not a Siri replacement. Not a smart-home controller. Not a voice agent for customer support.
+See [PRD-v1.md](./PRD-v1.md) for the full anti-scope definition.
 
 ## Install
 
-> Coming with v0.1 release.
+### From package manager (when v0.1 ships)
+
+```bash
+npm install && npm run tauri build
+```
+
+### Build from source
+
+```bash
+git clone https://github.com/sovereign-shovels/claude-radio.git
+cd claude-radio
+```
+# Install dependencies
+npm install
+
+# Build desktop app
+npm run tauri build
+
+# Or run in dev mode
+npm run tauri dev
+```
 
 ## Configure
 
 You bring the model. By default `claude-radio` tries to use a local provider:
 
 - For LLM endpoints: Ollama at `http://localhost:11434`
-- For voice endpoints: configurable, see [docs/configure.md]
+- For voice endpoints: configurable, see docs
 
 To use any other provider (Claude, GPT, Hermes, OpenRouter, Sarvam, etc.):
 
@@ -46,7 +66,7 @@ LM Studio, and vLLM all work via their OpenAI-compatible endpoints.
 
 ## Why this exists
 
-Voice interfaces with LLMs are clunky. Native voice modes lock you to one vendor. Local solutions are research-grade. claude-radio is a tray app with push-to-talk, multi-provider support (STT and TTS independently), and an ambient/dictation focus rather than trying to be a Siri replacement.
+See [PRD-v1.md](./PRD-v1.md) for the problem statement and rationale.
 
 ## What's next
 
