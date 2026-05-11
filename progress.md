@@ -61,3 +61,4 @@ Latency feeling terrible vs native voice tools.
 
 Status: not triggered.
 - 2026-05-10 — v0.1 built — Rust CLI with RSS fetch and LLM script generation
+- 2026-05-10 — hardened against local Ollama — all CLI paths verified, compile+tests green
